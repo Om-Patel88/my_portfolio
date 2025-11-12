@@ -463,17 +463,14 @@
                     <i data-lucide="mail" class="w-8 h-8 mx-auto mb-2 text-blue-400"></i>
                     <a href="mailto:Ompatel882004@gmail.com" class="hover:text-blue-300">Ompatel882004@gmail.com</a>
                 </div>
+                
                 <div class="text-center text-slate-400">
-                    <i data-lucide="phone" class="w-8 h-8 mx-auto mb-2 text-blue-400"></i>
-                    <span class="hover:text-blue-300">+1 (438) 680-8765</span>
-                </div>
-                <!-- Add your LinkedIn and GitHub here when you have the links --><div class="text-center text-slate-400">
                     <i data-lucide="linkedin" class="w-8 h-8 mx-auto mb-2 text-blue-400"></i>
-                    <a href="#" class="hover:text-blue-300">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/om-patel-33511b241/" class="hover:text-blue-300">LinkedIn</a>
                 </div>
                 <div class="text-center text-slate-400">
                     <i data-lucide="github" class="w-8 h-8 mx-auto mb-2 text-blue-400"></i>
-                    <a href="#" class="hover:text-blue-300">GitHub</a>
+                    <a href="https://github.com/Om-Patel88" class="hover:text-blue-300">GitHub</a>
                 </div>
             </div>
         </section>
@@ -481,13 +478,13 @@
     </main>
 
     <!-- ===== AI Chat Bubble ===== -->
-    <button id="chat-bubble-btn" aria-label="Open AI Chat">
+    <!-- <button id="chat-bubble-btn" aria-label="Open AI Chat">
         <i data-lucide="message-circle" class="w-8 h-8"></i>
-    </button>
+    </button> -->
 
     <!-- ===== AI Chat Modal ===== -->
-    <div id="chat-modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="chat-modal-title">
-        <!-- Header -->
+    <!-- <div id="chat-modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="chat-modal-title">
+       
         <div class="flex-shrink-0 bg-slate-900 p-4 flex justify-between items-center border-b border-slate-700">
             <h2 id="chat-modal-title" class="text-lg font-semibold text-white flex items-center gap-2">
                 <i data-lucide="sparkles" class="w-5 h-5 text-blue-400"></i>
@@ -498,21 +495,21 @@
             </button>
         </div>
         
-        <!-- Messages -->
+        
         <div id="chat-messages" class="flex-grow p-4 overflow-y-auto flex flex-col space-y-2">
             <div class="chat-message bot">
                 Hi there! I'm Om's AI assistant. Feel free to ask me any questions about his skills, projects, or experience.
             </div>
         </div>
         
-        <!-- Input Form -->
+       
         <form id="chat-form" class="flex-shrink-0 p-4 border-t border-slate-700 flex gap-2">
             <input type="text" id="chat-input" class="flex-grow bg-slate-700 border border-slate-600 rounded-full px-4 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ask about a project..." required>
             <button type="submit" id="chat-send-btn" class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-2.5 flex items-center justify-center">
                 <i data-lucide="send" class="w-5 h-5"></i>
             </button>
         </form>
-    </div>
+    </div> -->
 
 
     <!-- ===== Footer ===== --><footer class="bg-slate-900 border-t border-slate-700 mt-20">
@@ -620,30 +617,30 @@
 
 
             // ===== AI Chat Logic =====
-            const chatBubbleBtn = document.getElementById('chat-bubble-btn');
-            const chatModal = document.getElementById('chat-modal');
-            const chatCloseBtn = document.getElementById('chat-close-btn');
-            const chatForm = document.getElementById('chat-form');
-            const chatInput = document.getElementById('chat-input');
-            const chatMessages = document.getElementById('chat-messages');
-            const chatSendBtn = document.getElementById('chat-send-btn');
+            // const chatBubbleBtn = document.getElementById('chat-bubble-btn');
+            // const chatModal = document.getElementById('chat-modal');
+            // const chatCloseBtn = document.getElementById('chat-close-btn');
+            // const chatForm = document.getElementById('chat-form');
+            // const chatInput = document.getElementById('chat-input');
+            // const chatMessages = document.getElementById('chat-messages');
+            // const chatSendBtn = document.getElementById('chat-send-btn');
             
-            let portfolioContext = '';
+            // let portfolioContext = '';
 
-            function toggleChatModal() {
-                chatModal.classList.toggle('hidden');
-                if (!chatModal.classList.contains('hidden')) {
-                    chatInput.focus();
-                    // Generate context only when chat is opened for the first time
-                    if (!portfolioContext) {
-                        portfolioContext = getPortfolioContext();
-                    }
-                }
-            }
+            // function toggleChatModal() {
+            //     chatModal.classList.toggle('hidden');
+            //     if (!chatModal.classList.contains('hidden')) {
+            //         chatInput.focus();
+            //         // Generate context only when chat is opened for the first time
+            //         if (!portfolioContext) {
+            //             portfolioContext = getPortfolioContext();
+            //         }
+            //     }
+            // }
 
             // Toggle modal
-            chatBubbleBtn.addEventListener('click', toggleChatModal);
-            chatCloseBtn.addEventListener('click', toggleChatModal);
+            // chatBubbleBtn.addEventListener('click', toggleChatModal);
+            // chatCloseBtn.addEventListener('click', toggleChatModal);
 
             // Handle chat submission
             chatForm.addEventListener('submit', async (e) => {
