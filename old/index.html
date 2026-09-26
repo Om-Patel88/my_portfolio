@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | CS Major</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6', // blue-500
+                        secondary: '#6b7280' // gray-500
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <custom-navbar></custom-navbar>
+
+    <main class="container mx-auto px-4 py-8 md:px-6">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[80vh] flex flex-col justify-center items-center text-center py-12">
+            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary to-blue-600 mb-6 overflow-hidden">
+                <img src="http://static.photos/technology/320x240/42" alt="Profile" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Your Name Here</h1>
+            <h2 class="text-xl md:text-2xl text-secondary mb-6">3rd Year Computer Science Major</h2>
+            <p class="max-w-2xl text-lg md:text-xl text-gray-600 mb-8">
+                Passionate about building innovative solutions and exploring the frontiers of technology.
+            </p>
+            <div class="flex gap-4">
+                <a href="#projects" class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-blue-600 transition duration-300">
+                    View Projects
+                </a>
+                <a href="#contact" class="px-6 py-3 border border-primary text-primary rounded-lg hover:bg-blue-50 transition duration-300">
+                    Contact Me
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16">
+            <h2 class="text-3xl font-bold mb-12 text-center">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-semibold mb-4">My Journey</h3>
+                    <p class="text-gray-600 mb-6">
+                        I'm currently pursuing my Bachelor's degree in Computer Science with a focus on software development and system design. My academic journey has equipped me with strong problem-solving skills and a solid foundation in computer science principles.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <i data-feather="book" class="text-primary mt-1"></i>
+                            <div>
+                                <h4 class="font-medium">Education</h4>
+                                <p class="text-gray-600">Bachelor of Science in Computer Science<br>University Name (Expected Graduation: 2025)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i data-feather="briefcase" class="text-primary mt-1"></i>
+                            <div>
+                                <h4 class="font-medium">Experience</h4>
+                                <p class="text-gray-600">Software Engineering Intern at Company Name (Summer 2023)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <div class="bg-gradient-to-br from-primary to-blue-600 p-1 rounded-xl">
+                        <div class="bg-white rounded-lg p-4">
+                            <h4 class="font-bold mb-4 text-center">Technical Skills</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center gap-2">
+                                    <i data-feather="code" class="text-primary"></i>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-feather="code" class="text-primary"></i>
+                                    <span>Python</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-feather="code" class="text-primary"></i>
+                                    <span>Java</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-feather="code" class="text-primary"></i>
+                                    <span>C++</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-feather="database" class="text-primary"></i>
+                                    <span>SQL</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i data-feather="git-merge" class="text-primary"></i>
+                                    <span>Git</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16">
+            <h2 class="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/1" alt="Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Project Title</h3>
+                        <p class="text-gray-600 mb-4">Brief description of the project and technologies used.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:underline flex items-center gap-1">
+                                <i data-feather="github" class="w-4 h-4"></i> Code
+                            </a>
+                            <a href="#" class="text-primary hover:underline flex items-center gap-1">
+                                <i data-feather="external-link" class="w-4 h-4"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/2" alt="Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Project Title</h3>
+                        <p class="text-gray-600 mb-4">Brief description of the project and technologies used.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm">Flask</span>
+                            <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm">TensorFlow</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:underline flex items-center gap-1">
+                                <i data-feather="github" class="w-4 h-4"></i> Code
+                            </a>
+                            <a href="#" class="text-primary hover:underline flex items-center gap-1">
+                                <i data-feather="external-link" class="w-4 h-4"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="h-48 bg-gray-200 overflow-hidden">
+                        <img src="http://static.photos/technology/640x360/3" alt="Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Project Title</h3>
+                        <p class="text-gray-600 mb-4">Brief description of the project and technologies used.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm">Java</span>
+                            <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm">Spring Boot</span>
+                            <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm">PostgreSQL</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:underline flex items-center gap-1">
+                                <i data-feather="github" class="w-4 h-4"></i> Code
+                            </a>
+                            <a href="#" class="text-primary hover:underline flex items-center gap-1">
+                                <i data-feather="external-link" class="w-4 h-4"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="py-16">
+            <h2 class="text-3xl font-bold mb-12 text-center">Certificates & Achievements</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-100 p-3 rounded-lg">
+                            <i data-feather="award" class="text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Certificate Title</h3>
+                            <p class="text-gray-600 mb-2">Issuing Organization - Month Year</p>
+                            <p class="text-gray-600">Description of what the certificate represents and skills gained.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-100 p-3 rounded-lg">
+                            <i data-feather="award" class="text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Certificate Title</h3>
+                            <p class="text-gray-600 mb-2">Issuing Organization - Month Year</p>
+                            <p class="text-gray-600">Description of what the certificate represents and skills gained.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16">
+            <h2 class="text-3xl font-bold mb-12 text-center">Get In Touch</h2>
+            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="p-8">
+                    <form>
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300 flex items-center justify-center gap-2">
+                            <i data-feather="send" class="w-5 h-5"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="bg-gray-50 px-8 py-6">
+                    <div class="flex flex-col md:flex-row justify-between gap-6">
+                        <div class="flex items-center gap-3">
+                            <i data-feather="mail" class="text-primary"></i>
+                            <span>your.email@example.com</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-feather="phone" class="text-primary"></i>
+                            <span>(123) 456-7890</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-feather="map-pin" class="text-primary"></i>
+                            <span>Your Location</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
