@@ -1,16 +1,47 @@
-# React + Vite
+# om-patel.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+My personal site. It lists my projects, my experience and how to reach me.
 
-Currently, two official plugins are available:
+Built with React and Vite, routed with React Router, and deployed to GitHub
+Pages by the workflow in `.github/workflows/deploy.yml` on every push to `main`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Running it locally
 
-## React Compiler
+```bash
+npm install
+npm run dev       # dev server on http://localhost:5173
+npm run build     # production build into dist/
+npm run preview   # serve the build
+npm run lint
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Layout
 
-## Expanding the Oxlint configuration
+```
+src/
+  data/projects.js   every project shown on the site
+  data/profile.js    experience, education, skills, contact links
+  pages/             home, project index, single project, 404
+  components/        header, footer, project list, theme toggle
+scripts/
+  spa-fallback.js    copies index.html to 404.html after the build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Pages has no server-side routing, so a direct visit to `/projects/<slug>`
+would normally 404. The build copies `index.html` to `404.html`, Pages serves
+that for unknown paths, and React Router renders the right page.
+
+## Adding a project
+
+Each project lives in its own repo (locally in a sibling folder next to this
+one). Once it's ready to show:
+
+1. Add an entry to `src/data/projects.js`. The comment at the top of the file
+   lists the fields. `slug` becomes the URL and `featured: true` puts it on the
+   home page.
+2. Optionally drop a screenshot or GIF into `public/projects/` and set
+   `image: '/projects/<file>'`.
+3. Set `repo` and `demo` if they exist. The project page only shows the
+   buttons that have a link.
+
+Push to `main` and it's live a minute or two later.
