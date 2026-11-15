@@ -21,6 +21,30 @@ export const AREAS = {
 
 export const projects = [
   {
+    slug: 'raft-kv',
+    title: 'Raft KV',
+    summary:
+      'A fault-tolerant distributed key-value store built on my own implementation of the Raft consensus algorithm.',
+    area: 'systems',
+    status: 'shipped',
+    featured: true,
+    stack: ['Go', 'Raft', 'Distributed systems', 'WebAssembly'],
+    repo: 'https://github.com/Om-Patel88/raft-kv',
+    demo: 'https://om-patel88.github.io/raft-kv/',
+    image: '/projects/raft-kv.png',
+    overview:
+      'A cluster of nodes that keeps a replicated log and stays correct while nodes crash, restart or get cut off from each other. I wrote the Raft library from the paper, then built a key-value server, a client and a CLI on top of it. The demo runs five nodes in the browser, using the same Go code compiled to WebAssembly, so you can kill the leader or split the network and watch it recover.',
+    highlights: [
+      'Leader election, log replication and snapshots, following the Raft paper.',
+      'Write-ahead log with checksums and fsync, so a node can crash at any point and recover.',
+      'Linearizable reads and writes, and retries that never apply a write twice.',
+      'Tests that partition, crash and restart nodes on a simulated network while checking that no two nodes ever disagree.',
+      'HTTP API, a Go client that follows the leader, and a small command-line tool.',
+    ],
+    learned:
+      'Getting Raft to work on the happy path took a few days. Getting it to survive the tests that drop messages and crash nodes mid-write took most of the project, and taught me to design for testing first: keeping the network and disk behind interfaces is what made it possible to reproduce the hard failures.',
+  },
+  {
     slug: 'aero-design-team',
     title: 'Dalhousie Aero Design Team',
     summary:
