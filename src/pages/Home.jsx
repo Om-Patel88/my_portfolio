@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom';
 import ProjectList from '../components/ProjectList.jsx';
 import { projects } from '../data/projects.js';
 import { education, experience, skills } from '../data/profile.js';
+import useTitle, { DEFAULT_TITLE } from '../hooks/useTitle.js';
 
 export default function Home() {
+  useTitle(DEFAULT_TITLE);
   const featured = projects.filter((p) => p.featured);
 
   return (

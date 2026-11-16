@@ -1,18 +1,13 @@
-import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { AREAS, findProject, projects } from '../data/projects.js';
+import useTitle from '../hooks/useTitle.js';
 import NotFound from './NotFound.jsx';
 
 export default function ProjectPage() {
   const { slug } = useParams();
   const project = findProject(slug);
 
-  useEffect(() => {
-    if (project) document.title = `${project.title} · Om Patel`;
-    return () => {
-      document.title = 'Om Patel · Software Developer';
-    };
-  }, [project]);
+  useTitle(project && `${project.title} · Om Patel`);
 
   if (!project) return <NotFound />;
 

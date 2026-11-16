@@ -1,8 +1,11 @@
 import { useSearchParams } from 'react-router-dom';
 import ProjectList from '../components/ProjectList.jsx';
 import { AREAS, projects } from '../data/projects.js';
+import useTitle from '../hooks/useTitle.js';
 
 export default function ProjectsPage() {
+  useTitle('Projects · Om Patel');
+
   // Keep the filter in the URL so a filtered list can be linked to directly.
   const [params, setParams] = useSearchParams();
   const area = params.get('area') ?? 'all';

@@ -11,7 +11,7 @@ const SITE = 'https://www.om-patel.com';
 const DEFAULT_TITLE = 'Om Patel · Software Developer';
 
 // Keep in sync with the routes in src/App.jsx. Titles match what the pages set
-// at runtime, so nothing changes once the app loads.
+// at runtime with useTitle, so nothing changes once the app loads.
 const pages = [
   {
     path: '/',
@@ -21,7 +21,7 @@ const pages = [
   },
   {
     path: '/projects',
-    title: DEFAULT_TITLE,
+    title: 'Projects · Om Patel',
     description: "Everything I've built: school work, side projects and team builds.",
   },
   ...projects.map((p) => ({
