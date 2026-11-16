@@ -24,12 +24,15 @@ src/
   pages/             home, project index, single project, 404
   components/        header, footer, project list, theme toggle
 scripts/
-  spa-fallback.js    copies index.html to 404.html after the build
+  static-pages.js    writes an index.html per route after the build
 ```
 
 Pages has no server-side routing, so a direct visit to `/projects/<slug>`
-would normally 404. The build copies `index.html` to `404.html`, Pages serves
-that for unknown paths, and React Router renders the right page.
+would normally 404. After the build, `static-pages.js` writes a copy of
+`index.html` for every route (`/`, `/projects` and one per project in
+`projects.js`), each with its own title, description and Open Graph tags, and
+React Router takes over once the page loads. `404.html` is kept for URLs that
+don't exist. New projects get their page automatically.
 
 ## Adding a project
 
